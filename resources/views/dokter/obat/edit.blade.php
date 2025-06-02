@@ -12,7 +12,7 @@
                     <section>
                         <header>
                             <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                                {{ __("Update Obat $obat->nama_obat") }}
+                                {{ __("Update Obat | ") }} {{ $obat->nama_obat }}
                             </p>
                         </header>
 
@@ -21,7 +21,7 @@
                             @method('patch')
 
                             <div>
-                                <x-input-label for="nama_obat" :value="__('Nama_obat')" />
+                                <x-input-label for="nama_obat" :value="__('Nama Obat')" />
                                 <x-text-input id="nama_obat" name="namaObat" type="text" class="mt-1 block w-full" :value="old('namaObat', $obat->nama_obat)" required autofocus autocomplete="namaObat" />
                                 <x-input-error class="mt-2" :messages="$errors->get('nama_obat')" />
                             </div>
